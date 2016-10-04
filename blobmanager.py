@@ -197,7 +197,6 @@ class RedisBlobManager(BaseBlobManager):
 
         self.redis_client.transaction(put_block_transaction, 'next_blob',
                                       'next_blob_index')
-
         with open(self._get_file_path(blob), 'ba') as fd:
             fd.write(block_data)
 
