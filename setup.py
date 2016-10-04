@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='BLOB Manager',
+setup(name='BLOBManager',
       version='1.0',
       description='Manager for storing data in BLOBs',
       author='Dmitry Russkikh',
@@ -8,5 +8,4 @@ setup(name='BLOB Manager',
       license='Apache License, Version 2.0',
       url='https://github.com/drusskikh/blobmanager',
       py_modules=['blobmanager'],
-#      install_requires=['numpy', 'redis'],
      )

@@ -64,9 +64,10 @@ class BaseBlobManager(object, metaclass=abc.ABCMeta):
         Returns:
             int: Returns 0 in the case of success and non-zero in other cases.
         """
-        if not isinstance(block_size, uint64) or not isinstance(blob_size,
-                                                                uint32):
-            raise ValueError('Wrong input parameter type.')
+        if not isinstance(block_size, uint64):
+            raise ValueError("Wrong 'block_size' parameter type.")
+        if not isinstance(blob_size, uint32):
+            raise ValueError("Wrong 'blob_size' parameter type.")
         self.block_size = block_size
         self.blob_size = blob_size
 
@@ -81,11 +82,12 @@ class BaseBlobManager(object, metaclass=abc.ABCMeta):
         Returns:
             int: Returns 0 in the case of success and non-zero in other cases.
         """
-        if not isinstance(block_id, uint64) or not isinstance(block_data,
-                                                              bytearray):
-            raise ValueError('Wrong input parameter type.')
+        if not isinstance(block_id, uint64):
+            raise ValueError("Wrong 'block_id' parameter type.")
+        if not isinstance(block_data, bytearray):
+            raise ValueError("Wrong 'block_data' parameter type.")
         if len(block_data) != self.block_size:
-            raise AttributeError('Incorrect block size.')
+            raise AttributeError("Incorrect block size.")
 
     @abc.abstractmethod
     def get_block(self, block_id: uint64, block_data: bytearray) -> int:
@@ -100,9 +102,10 @@ class BaseBlobManager(object, metaclass=abc.ABCMeta):
         Returns:
             int: Returns 0 in the case of success and non-zero in other cases.
         """
-        if not isinstance(block_id, uint64) or not isinstance(block_data,
-                                                              bytearray):
-            raise ValueError('Wrong input parameter type.')
+        if not isinstance(block_id, uint64):
+            raise ValueError("Wrong 'block_id' parameter type.")
+        if not isinstance(block_data, bytearray):
+            raise ValueError("Wrong 'block_data' parameter type.")
 
 
 class RedisBlobManager(BaseBlobManager):
