@@ -12,8 +12,8 @@ BLOBManager is tested for Python 3.5 and Ubuntu 16.04.
 
 1. First install requirements:
 
-> sudo apt intall python3 python-tox
-> sudo apt intall redis-server
+    sudo apt intall python3 python-tox
+    sudo apt intall redis-server
 
 2. Download and unpack BLOBManager egg.
 3. Install requirements from `requirements.txt` file.
