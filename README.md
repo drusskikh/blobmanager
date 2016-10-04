@@ -12,23 +12,27 @@ BLOBManager is tested for Python 3.5 and Ubuntu 16.04.
 
 1. First install requirements:
 
-'''
+```
 sudo apt intall python3 python-tox
 sudo apt intall redis-server
-'''
+```
 
 2. Download and unpack BLOBManager egg.
 3. Install requirements from `requirements.txt` file.
+4. Install package
+```
+python3 setup.py install
+```
 
 ## Run functional tests
 
-'''
+```
 tox -e py35
-'''
+```
 
 ## How to use
 
-'''python
+```python
 import blobmanager
 import numpy
 
@@ -50,4 +54,4 @@ bm.put_block(numpy.uint64(1), block_data)
 
 block_data = bytearray()
 bm.get_block(numpy.uint64(1), block_data)
-'''
+```
