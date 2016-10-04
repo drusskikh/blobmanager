@@ -10,7 +10,7 @@ files. Foe now is only implemented manager is `RedisBlobManager`
 
 BLOBManager is tested for Python 3.5 and Ubuntu 16.04.
 
-* First install requirements:
+* Install requirements:
 
 ```
 sudo apt intall python3 python-tox
