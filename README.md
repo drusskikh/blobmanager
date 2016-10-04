@@ -10,16 +10,16 @@ files. Foe now is only implemented manager is `RedisBlobManager`
 
 BLOBManager is tested for Python 3.5 and Ubuntu 16.04.
 
-1. First install requirements:
+* First install requirements:
 
 ```
 sudo apt intall python3 python-tox
 sudo apt intall redis-server
 ```
 
-2. Download and unpack BLOBManager egg.
-3. Install requirements from `requirements.txt` file.
-4. Install package
+* Download and unpack BLOBManager egg.
+* Install requirements from `requirements.txt` file.
+* Install package
 ```
 python3 setup.py install
 ```
