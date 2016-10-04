@@ -51,7 +51,6 @@ block_data = bytearray([1 for x in range(4096)])
 bm.put_block(numpy.uint64(1), block_data)
 
 # get block from blob
-
 block_data = bytearray()
 bm.get_block(numpy.uint64(1), block_data)
 ```
